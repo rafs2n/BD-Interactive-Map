@@ -22,11 +22,16 @@ body{
 
 
 /* ----------------Map Details/* ---------------- */
+
+            text:hover{
+                cursor: pointer;
+            }
             .st0 {
                 fill-rule: evenodd;
                 clip-rule: evenodd;
                 fill: #00962A;
                 stroke: #FFFFFF;
+                cursor: pointer;
             }
 
             .st1 {
@@ -60,10 +65,15 @@ body{
                 stroke: #FFFFFF;
                 stroke-linecap: round;
                 stroke-linejoin: round;
-            }
-
-            svg path:hover{
-                fill: red;
-                transition: 0.3s;
                 cursor: pointer;
             }
+
+            .st0:hover, .st7:hover{
+               fill: red;
+            }
+            text{
+                pointer-events: none;
+            }
+            /* .st-selected{
+                fill: red !important;
+            } */
