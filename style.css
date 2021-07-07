@@ -1,79 +1,117 @@
-*{
-    margin: 0px;
-    padding: 0px;
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Zen+Tokyo+Zoo&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-body{
-    margin: 0px;
+body {
+  margin: 0px;
+}
+.header {
+  padding: 5px;
+  background-color: #d5fefd;
+  background-image: linear-gradient(315deg, #d5fefd 0%, #fffcff 74%);
+}
+.header h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+.header p {
+  margin-top: -20px;
 }
 
-.jumbotron{
+.header img {
+  padding: 0px;
+  margin: 0px;
+  width: 70px;
+  height: auto;
+}
+
+.card-header {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+.footer {
+}
+
+/* .jumbotron{
     border-radius: 0px;
     margin: 0px -29px;
+} */
+
+#info {
+  height: 600px;
+  overflow-y: scroll;
 }
 
+svg {
+  width: 90%;
+  height: auto;
+}
 
-
-
-
-
-
-
-
+@media screen and (max-width: 992px) {
+  .info-card {
+    width: 70%;
+    margin: 0px auto;
+    height: 80%;
+  }
+}
 
 /* ----------------Map Details/* ---------------- */
 
-            text:hover{
-                cursor: pointer;
-            }
-            .st0 {
-                fill-rule: evenodd;
-                clip-rule: evenodd;
-                fill: #00962A;
-                stroke: #FFFFFF;
-                cursor: pointer;
-            }
+text:hover {
+  cursor: pointer;
+}
+.st0 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #00962a;
+  stroke: #ffffff;
+  cursor: pointer;
+}
 
-            .st1 {
-                fill: #FFFFFF;
-            }
+.st1 {
+  fill: #ffffff;
+}
 
-            .st2 {
-                font-family: 'Calibri';
-            }
+.st2 {
+  font-family: "Calibri";
+}
 
-            .st3 {
-                font-size: 10.697px;
-            }
+.st3 {
+  font-size: 10.697px;
+}
 
-            .st4 {
-                font-size: 10.698px;
-            }
+.st4 {
+  font-size: 10.698px;
+}
 
-            .st5 {
-                font-size: 6.4182px;
-            }
+.st5 {
+  font-size: 6.4182px;
+}
 
-            .st6 {
-                font-size: 7.4879px;
-            }
+.st6 {
+  font-size: 7.4879px;
+}
 
-            .st7 {
-                fill-rule: evenodd;
-                clip-rule: evenodd;
-                fill: #00962A;
-                stroke: #FFFFFF;
-                stroke-linecap: round;
-                stroke-linejoin: round;
-                cursor: pointer;
-            }
+.st7 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #00962a;
+  stroke: #ffffff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  cursor: pointer;
+}
 
-            .st0:hover, .st7:hover{
-               fill: red;
-            }
-            text{
-                pointer-events: none;
-            }
-            /* .st-selected{
+.st0:hover,
+.st7:hover {
+  fill: red;
+}
+text {
+  pointer-events: none;
+}
+/* .st-selected{
                 fill: red !important;
             } */
