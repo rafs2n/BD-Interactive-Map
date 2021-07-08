@@ -1,15 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Zen+Tokyo+Zoo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 
-* {
-  margin: 0px;
-  padding: 0px;
-}
 p {
   font-family: "Montserrat", sans-serif;
 }
 body {
   margin: 0px;
+  padding: 0px;
 }
 .header {
   padding: 5px;
@@ -19,10 +16,13 @@ body {
 .header h2 {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
+  font-size: 30px;
 }
 .header p {
   margin-top: -20px;
   font-weight: 500;
+  color: #555;
+  letter-spacing: 3px;
 }
 
 .header img {
@@ -49,6 +49,29 @@ svg {
 path.active {
   fill: red;
 }
+.fa {
+  color: #555;
+}
+.footer a {
+  text-decoration: none;
+  color: #555;
+}
+.footer p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+.span {
+  color: #00962a;
+}
+.links {
+  margin-bottom: 20px;
+  padding: 0px 5px;
+}
+.links:hover {
+  border-bottom: 2px solid green;
+}
+
 /* .img-thumbnail {
   width: 50%;
   height: auto;
