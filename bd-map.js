@@ -14,12 +14,15 @@ $(document).ready(function () {
                     $('#info').load('info.html #panchagarh')     //loading data from info.html
                     break;
                 case "bandarban":
+                    $('#card-header').html('<h4>Bandarban | বান্দরবান</h4>')
                     $('#info').load('info.html #bandarban')
                     break;
                 case "comilla":
+                    $('#card-header').html('<h4>Comilla | কুমিল্লা</h4>')
                     $('#info').load('info.html #comilla')
                     break;
                 case "sylhet":
+                    $('#card-header').html('<h4>Sylhet | সিলেট</h4>')
                     $('#info').load('info.html #sylhet')
                     break;
             }
