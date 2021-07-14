@@ -20,7 +20,10 @@ $(document).ready(function () {
                 case "comilla":
                     $('#card-header').html('<h4>Comilla | কুমিল্লা</h4>')
                     $('#info').load('info.html #comilla')
+                    $("#ayoton").val("৩০৮৭.৩৩ বর্গ কিলোমিটার")
+                    $("#population").val("৫৩,৮৭,২৮৮ জন")
                     break;
+
                 case "sylhet":
                     $('#card-header').html('<h4>Sylhet | সিলেট</h4>')
                     $('#info').load('info.html #sylhet')
