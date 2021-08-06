@@ -1,3 +1,12 @@
+/*
+*
+* Title: Bangladesh | A Digital Interactive Map
+* Description: This file contain all the style related programs!
+*
+*/
+
+
+
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Zen+Tokyo+Zoo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 
@@ -17,6 +26,10 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-size: 25px;
+}
+.header a{
+  text-decoration: none;
+  color: black;
 }
 .header p {
   font-size: 15px;
@@ -45,6 +58,10 @@ body {
   width: 100%;
   height: 600px;
 }
+.scroll{
+  max-height: 600px;
+  overflow-y: auto;
+}
 
 .info-card2{
   width: 100%;
@@ -54,11 +71,10 @@ body {
 .card-body p{
   font-size: 15px;
 }
-/* #info {
-  width: 100%;
-  height: 700px;
-  overflow-y: scroll;
-} */
+td{
+  font-size: 15px;
+}
+
 
 svg {
   width: 80%;
@@ -90,7 +106,7 @@ path.active {
   border-bottom: 2px solid green;
 }
 /* ----------------------------------------- */
-.description{
+/* .description{
   pointer-events: none;
   position: absolute;
   font-size: 18px;
@@ -121,36 +137,18 @@ a:after{
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid white;
-}
-
-/* .img-thumbnail {
-  width: 50%;
-  height: auto;
 } */
 
-@media screen and (max-width: 992px) {
-  .info-card {
-    width: 70%;
-    margin: 0px auto;
-    height: 600px;
-  }
-  .info-card2{
-    width: 70%;
-    margin: 10px auto;
-  }
 
-  .form-group{
-    width: 100%;
-    margin: 10px auto;
-  }
-}
 
-@media screen and (max-width: 1180){
-  .info-card{
-  width: 100%;
-  height: 400px;
-}
-}
+
+
+
+
+
+
+
+
 
 /* ----------------Map Details/* ---------------- */
 
@@ -206,6 +204,3 @@ text:hover {
 text {
   pointer-events: none;
 }
-/* .st-selected{
-                fill: red !important;
-            } */

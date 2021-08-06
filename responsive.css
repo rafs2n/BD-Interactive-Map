@@ -1,0 +1,43 @@
+/*
+*
+* Title: Bangladesh | A Digital Interactive Map
+* Description: This file contain all the responsive realated functions!
+*
+*/
+
+@media screen and (max-width: 992px) {
+  .info-card {
+    width: 70%;
+    margin: 0px auto;
+    height: 600px;
+  }
+  .info-card2{
+    width: 70%;
+    margin: 10px auto;
+  }
+
+}
+
+@media screen and (max-width: 1180){
+.info-card{
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 1220px){
+.info-card{
+    height: 500px;
+  }
+.scroll{
+    max-height: 500px;
+  }
+}
+@media screen and (max-width: 700px){
+.info-card{
+  width: 100%;
+}
+.info-card2{
+    width: 100%;
+  }
+}
