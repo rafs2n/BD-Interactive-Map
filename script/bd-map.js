@@ -52,8 +52,8 @@ $(document).ready(function () {
                     $('#info').load('db.html #comilla')
                     $("#population").load("db.html #comilla-population")
                     $("#volume").load("db.html #comilla-volume")
-                    // $("#food").load("db.html #comilla-food")
-                    // $("#tourist-place").load("db.html #comilla-tourist-place")
+                    $("#food").load("db.html #comilla-food")
+                    $("#tourist-place").load("db.html #comilla-tourist-place")
                     break;
 
                 case "sylhet":
@@ -61,8 +61,8 @@ $(document).ready(function () {
                     $('#info').load('db.html #sylhet')
                     $("#population").load("db.html #sylhet-population")
                     $("#volume").load("db.html #sylhet-volume")
-                    // $("#food").load("db.html #sylhet-food")
-                    // $("#tourist-place").load("db.html #sylhet-tourist-place")
+                    $("#food").load("db.html #sylhet-food")
+                    $("#tourist-place").load("db.html #sylhet-tourist-place")
                     break;
                 case "dhaka":
                     $('#card-header').html('<h4>Dhaka | ঢাকা</h4>')
@@ -79,5 +79,64 @@ $(document).ready(function () {
 })
 
 
-// ----------Distance Calculation----------
+// ----------Weather----------
+
+const inputCity = document.getElementById('input-city');
+const btn = document.getElementById('btn');
+const display = document.getElementById('img-display');
+const iconDisplay = document.getElementById('icon-display');
+const cityName = document.getElementById('city-name');
+const temp = document.getElementById('temp');
+const desc = document.getElementById('desc');
+const warning = document.getElementById('warning');
+
+const url = 'https://api.openweathermap.org/data/2.5/weather?q=dhaka&units=metric&appid=93d71f6bc1ab4092643bae17067ef4c9';
+const img = document.createElement('img');
+fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        // console.log(data);
+        const dName = data.name;
+        const dTemp = data.main.temp;
+        const dDesc = data.weather[0].main;
+        const dicon = data.weather[0].icon;
+        
+        // const img = document.createElement('img');
+        img.src = 'https://openweathermap.org/img/wn/' + dicon + '@2x.png'
+        display.appendChild(img);
+
+        cityName.innerText = dName;
+        temp.innerText = dTemp;
+        desc.innerText = dDesc;
+    })
+
+
+btn.addEventListener('click', function () {
+    warning.innerText = null;
+    const usrInput = inputCity.value;
+    if (usrInput != null && usrInput != '') {
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=' + usrInput + '&units=metric&appid=93d71f6bc1ab4092643bae17067ef4c9')
+            .then(response => response.json())
+            .then(data => {
+            // console.log(data);
+            const city = data.name;
+            const temperature = data.main.temp;
+            const descrip = data.weather[0].main;
+                const icon = data.weather[0].icon;
+                img.src = 'https://openweathermap.org/img/wn/' + icon + '@2x.png'
+                iconDisplay.appendChild(img);
+
+                cityName.innerText = city;
+                temp.innerText = temperature;
+                desc.innerText = descrip;
+            })
+            .catch(err => {
+                warning.innerText = 'city not found'
+        })
+    } else {
+        warning.innerText= 'invalid input'
+    }
+    inputCity.value = null;
+    inputCity.focus();
+})
 
