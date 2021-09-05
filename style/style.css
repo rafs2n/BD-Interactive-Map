@@ -5,8 +5,6 @@
 *
 */
 
-
-
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Zen+Tokyo+Zoo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 
@@ -105,9 +103,25 @@ path.active {
 .links:hover {
   border-bottom: 2px solid green;
 }
-.display{
-  background-color: lightgreen;
+
+#input-city{
+  padding: 20px;
 }
+#btn{
+  padding: 0px 40px;
+}
+
+.hover{
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.hover:hover{
+  background-color: #343A40;
+  color: white;
+}
+
+
 /* ----------------------------------------- */
 /* .description{
   pointer-events: none;

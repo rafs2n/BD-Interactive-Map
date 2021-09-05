@@ -16,7 +16,9 @@ $(document).ready(function () {
 
             $("#bd-map").find('path').removeClass('active');
             let targ = evt.target.tagName === 'path' ? $(evt.target) : $(evt.target).parent().prev('path');
-            console.log(targ.attr('id'))
+            // console.log(targ.attr('id'))
+            let targetId = targ.attr('id');
+            
             targ.addClass('active')
             switch (targ.attr('id')) {
                 case "panchagarh":
@@ -24,6 +26,8 @@ $(document).ready(function () {
                     $('#info').load('db.html #panchagarh')     //loading data from db.html
                     $("#population").load("db.html #panchagarh-population")
                     $("#volume").load("db.html #panchagarh-volume")
+                    $("#food").load("db.html #panchagarh-food")
+                    $("#tourist-place").load("db.html #panchagarh-tourist-place")
                     break;
 
                 case "bandarban":
@@ -69,10 +73,46 @@ $(document).ready(function () {
                     $('#info').load('db.html #dhaka')
                     $("#population").load("db.html #dhaka-population")
                     $("#volume").load("db.html #dhaka-volume")
+                    $("#food").load("db.html #dhaka-food")
+                    $("#tourist-place").load("db.html #dhaka-tourist-place")
                     break;
 
             }
+
+            // -------Weather Function-------
+
+
+const display = document.getElementById('img-display');
+const iconDisplay = document.getElementById('icon-display');
+const cityName = document.getElementById('city-name');
+const temp = document.getElementById('temp');
+const desc = document.getElementById('desc');
+const warning = document.getElementById('warning');
+
+
+            const img = document.createElement('img');
+            display.innerText = null;
+            iconDisplay.innerText = null;
+            warning.innerText = null;
+         fetch('https://api.openweathermap.org/data/2.5/weather?q=' + targetId + '&units=metric&appid=93d71f6bc1ab4092643bae17067ef4c9')
+            .then(response => response.json())
+            .then(data => {
+            const city = data.name;
+            const temperature = data.main.temp;
+            const descrip = data.weather[0].main;
+                const icon = data.weather[0].icon;
+                img.src = 'https://openweathermap.org/img/wn/' + icon + '@2x.png'
+                iconDisplay.appendChild(img);
+                cityName.innerText = city;
+                temp.innerText = temperature;
+                desc.innerText = descrip;
+            })
+            .catch(err => {
+                warning.innerText = 'city not found'
+        })
+    
         });
+        
     });
 
 
@@ -112,9 +152,11 @@ fetch(url)
 
 
 btn.addEventListener('click', function () {
+    
     warning.innerText = null;
     const usrInput = inputCity.value;
     if (usrInput != null && usrInput != '') {
+        iconDisplay.innerText = null;
         fetch('https://api.openweathermap.org/data/2.5/weather?q=' + usrInput + '&units=metric&appid=93d71f6bc1ab4092643bae17067ef4c9')
             .then(response => response.json())
             .then(data => {

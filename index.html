@@ -68,7 +68,8 @@
                       </tbody>
                     </table>
                     
-                    <h6 class="text-center mb-5 p-3 border border-success rounded">Calculate Distance</h6>
+                    <h6 class="text-center p-3 border border-dark rounded"><i class="fa fa-map"></i> Calculate Distance</h6>
+                    <p class="text-danger text-center mb-4">--- COMING SOON ---</p>
                    
                   </div>
                   <!-- --------- Distance Calculator-------- -->
@@ -84,30 +85,29 @@
                     </div>
                     <input type="text" class="form-control" placeholder="Place" id="to">
                     <div class="input-group-prepend">
-                      <button class="btn btn-success"><i class="fa fa-map-marker text-white" aria-hidden="true"></i> Calculate</button>
+                      <button class="btn btn-dark"><i class="fa fa-map-marker text-white" aria-hidden="true"></i> Calculate</button>
                     </div>
                   </div>
                   <div id="output"></div>
 
                   <!-- --------- Weather --------- -->
                   <div class="col-md-12 mt-5">
-                   
-                    <h6 class="text-center mb-5 p-3 border border-success rounded">All Weather</h6>
-                  
-                    <div class="input-group">
-                      <input id="input-city" type="text" class="form-control" placeholder="Enter a city">
-                      <div class="input-group-prepend">
-                        <button id="btn" class="btn btn-success"><i class="fa fa-search text-white"></i> Search</button>
+                      <h6 class="text-center p-3 border border-dark rounded mb-4"><i class="fa fa-globe"></i> Weather</h6>
+                      <div class="input-group">
+                        <input id="input-city" type="text" class="form-control" placeholder="Enter a city">
+                        <div class="input-group-prepend">
+                          <button id="btn" class="btn btn-dark"><i class="fa fa-search text-white"></i> Search</button>
+                        </div>
                       </div>
-                    </div>
-                    <small class="text-danger ml-1" id="warning"></small>
-                    <div class="display text-center mt-4 mb-3 pb-3 text-white rounded">
-                      <div id="img-display"></div>
-                      <div id="icon-display"></div>
-                      <h4><span id="city-name"></span></h4>
-                      <h5><span id="temp"></span>&deg; C</h5>
-                      <h6><span id="desc"></span></h6>
-                    </div>
+                      <small class="text-danger ml-1" id="warning"></small>
+                      <div class="display text-center text-dark">
+                        <div id="img-display"></div>
+                        <div id="icon-display"></div>
+                        <h4><span id="city-name"></span></h4>
+                        <h5><span id="temp"></span>&deg; C</h5>
+                        <h6><span id="desc"></span></h6>
+                       </div>
+                    
                   </div>
 
 
