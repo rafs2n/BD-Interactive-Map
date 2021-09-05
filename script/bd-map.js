@@ -176,9 +176,15 @@ btn.addEventListener('click', function () {
                 warning.innerText = 'city not found'
         })
     } else {
-        warning.innerText= 'invalid input'
+        warning.innerText= 'input can not be blank'
     }
     inputCity.value = null;
     inputCity.focus();
 })
 
+const calculate = document.getElementById('calculate');
+const coming = document.getElementById('coming');
+coming.style.display= 'none'
+calculate.addEventListener('click', function () {
+    coming.style.display= 'block'
+})

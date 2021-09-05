@@ -6,9 +6,13 @@
   <link rel="icon" href="img/icon.png" type="image/icon" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ---------FontAwesome CDN---------- -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- ---------Bootstrap CDN---------- -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+  <!-- ---------External Style---------- -->
   <link rel="stylesheet" href="style/style.css" />
+  <!-- ---------Responsive---------- -->
   <link rel="stylesheet" href="style/responsive.css">
 </head>
 
@@ -27,11 +31,13 @@
       </div>
     </div>
     <div class="row">
+      <!-- ---------- Map Section--------- -->
       <div class="col-lg-7 col-12 text-center">
         <div class="card mt-3">
           <div id="mySVG" class="card-body bg-light"></div>
         </div>
       </div>
+      <!-- ---------- Information Section--------- -->
       <div class="col-lg-5 col-12">
         <div class="card mt-3 info-card">
           <div id="card-header" class="card-header mt-1 text-center bg-light">
@@ -69,12 +75,12 @@
                     </table>
                     
                     <h6 class="text-center p-3 border border-dark rounded"><i class="fa fa-map"></i> Calculate Distance</h6>
-                    <p class="text-danger text-center mb-4">--- COMING SOON ---</p>
+                    <p id="coming" class="text-danger text-center">--- COMING SOON ---</p>
                    
                   </div>
-                  <!-- --------- Distance Calculator-------- -->
+                  <!-- --------- Distance Calculator Section-------- -->
                   
-                  <div class="input-group col-md-12 mb-3">
+                  <div class="input-group col-md-12 mb-3 mt-4">
                     
                     <div class="input-group-prepend">
                       <span class="input-group-text">From</span>
@@ -85,12 +91,12 @@
                     </div>
                     <input type="text" class="form-control" placeholder="Place" id="to">
                     <div class="input-group-prepend">
-                      <button class="btn btn-dark"><i class="fa fa-map-marker text-white" aria-hidden="true"></i> Calculate</button>
+                      <button id="calculate" class="btn btn-dark"><i class="fa fa-map-marker text-white" aria-hidden="true"></i> Calculate</button>
                     </div>
                   </div>
                   <div id="output"></div>
 
-                  <!-- --------- Weather --------- -->
+                  <!-- --------- Weather Section --------- -->
                   <div class="col-md-12 mt-5">
                       <h6 class="text-center p-3 border border-dark rounded mb-4"><i class="fa fa-globe"></i> Weather</h6>
                       <div class="input-group">
@@ -109,10 +115,7 @@
                        </div>
                     
                   </div>
-
-
                 </div>
-
               </div>
             </div>
           </div>
@@ -139,7 +142,6 @@
         </div>
       </div>
     </div>
-    <!-- <div class="description"></div> -->
   </div>
 
   <!-- Optional Popper Bootstrap JS and Jquery -->
@@ -153,3 +155,6 @@
 </body>
 
 </html>
+
+
+<!-- ---------- Date of Completion: 06.09.2021 --------- -->
