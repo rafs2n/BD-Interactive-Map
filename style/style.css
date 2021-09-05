@@ -105,10 +105,8 @@ path.active {
 .links:hover {
   border-bottom: 2px solid green;
 }
-
 .display{
-  /* background-color: cadetblue; */
-  background-color: lightslategray;
+  background-color: lightgreen;
 }
 /* ----------------------------------------- */
 /* .description{
