@@ -17,7 +17,7 @@ $(document).ready(function () {
             $("#bd-map").find('path').removeClass('active');
             let targ = evt.target.tagName === 'path' ? $(evt.target) : $(evt.target).parent().prev('path');
             // console.log(targ.attr('id'))
-            let targetId = targ.attr('id');
+            
             
             targ.addClass('active')
             switch (targ.attr('id')) {
@@ -81,7 +81,7 @@ $(document).ready(function () {
 
             // -------Weather Function-------
 
-
+            let targetId = targ.attr('id');
 const display = document.getElementById('img-display');
 const iconDisplay = document.getElementById('icon-display');
 const cityName = document.getElementById('city-name');
@@ -181,6 +181,8 @@ btn.addEventListener('click', function () {
     inputCity.value = null;
     inputCity.focus();
 })
+
+// ---------Distance Calculator---------
 
 const calculate = document.getElementById('calculate');
 const coming = document.getElementById('coming');
